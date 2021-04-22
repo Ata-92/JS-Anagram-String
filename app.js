@@ -8,6 +8,13 @@
 
 const arr = ['nap', 'teachers', 'cheaters', 'PAN', 'ear', 'era', 'hectares'];
 
-for (let item of arr) {
+let map = new Map();
 
+for (let value of arr) {
+  let key = value.toLocaleLowerCase().split("").sort().join("");
+  map.set(key, value);
 }
+
+console.log(map);
+console.log(map.keys());
+console.log(map.values());
